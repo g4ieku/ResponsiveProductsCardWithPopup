@@ -51,7 +51,7 @@ body {
 
 .container .technologies-container {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
    gap: 2rem;
 }
 
@@ -67,6 +67,7 @@ body {
 .container .technologies-container .technology:hover {
    outline: 0.3rem solid var(--text-gray);
    outline-offset: 0;
+   transition: all 0.3s linear;
 }
 
 .container .technologies-container .technology img {
@@ -92,10 +93,114 @@ body {
    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
    -webkit-text-stroke-width: 1.6px;
    -webkit-text-stroke-color: black;
+   transition: all 0.3s linear;
 }
 
 .container .technologies-container .technology .time {
    font-size: 1.6rem;
    font-weight: 500;
    color: var(--text-gray);
+}
+
+/* ===== TECHNOLOGY OVERVIEW ===== */
+.technology-preview {
+   position: fixed;
+   top: 0;
+   left: 0;
+   min-height: 100vh;
+   width: 100vw;
+   background: rgba(0, 0, 0, 0.85);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.technology-preview .preview {
+   display: none;
+   position: relative;
+   width: 40rem;
+   background: var(--white-color);
+   padding: 2.5rem 2rem;
+   margin: 2rem;
+   text-align: center;
+   color: var(--text-gray);
+}
+
+.technology-preview .preview.active {
+   display: inline-block;
+}
+
+.technology-preview .preview img {
+   height: 20rem;
+   object-fit: fill;
+}
+
+.technology-preview .preview .fa-times {
+   position: absolute;
+   top: 1rem;
+   right: 1.5rem;
+   font-size: 3rem;
+   color: var(--text-gray);
+   cursor: pointer;
+}
+
+.technology-preview .preview .fa-times:hover {
+   transform: rotate(180deg);
+   transition: all 0.2s linear;
+   color: var(--bg-color);
+}
+
+.technology-preview .preview h3 {
+   font-size: 2.5rem;
+   padding: 0.5rem 0;
+   columns: var(--text-gray);
+}
+
+.technology-preview .preview .stars {
+   font-size: 1.75rem;
+   padding: 1rem 0;
+}
+
+.technology-preview .preview .stars i {
+   color: var(--bg-color);
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+}
+
+.technology-preview .preview p {
+   color: var(--text-gray);
+   line-height: 1.6;
+   padding: 1rem 0;
+   font-size: 1.6rem;
+}
+
+.technology-preview .preview .price {
+   padding: 1rem 0;
+   font-size: 2.5rem;
+   font-weight: 600;
+   color: var(--bg-color);
+}
+
+.technology-preview .preview .btns {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   justify-content: center;
+   margin-top: 1rem;
+}
+
+.technology-preview .preview .btns a {
+   flex: 1 1 16rem;
+   background: var(--text-gray);
+   padding: 0.5rem 2rem;
+   font-size: 1.6rem;
+   color: var(--white-color);
+}
+
+.technology-preview .preview .btns a:hover {
+   transform: translateY(-0.5rem) rotate(5deg);
+   border: 1px solid var(--text-gray);
+   background: var(--white-color);
+   color: var(--text-gray);
+   font-weight: 700;
 }
