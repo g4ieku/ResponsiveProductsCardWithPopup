@@ -1,0 +1,33 @@
+/* ===== VARIABLES ===== */
+:root {
+   /* Colors */
+   --bg-color: #ccd5ae;
+   --first-color: #e9edc9;
+   --white-color: #fff;
+   --light-color: #fefae0;
+   --brown-color: #d4a373;
+   --text-gray: #333;
+   --shadow-img: 0 0 48px hsla(93, 54%, 54%, 0.45);
+}
+
+/* ===== GENERAL STYLE ===== */
+* {
+   font-family: "Poppins", sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   list-style: none;
+   text-decoration: none;
+   transition: all 0.2s linear;
+}
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body {
+   background: var(--bg-color);
+}
